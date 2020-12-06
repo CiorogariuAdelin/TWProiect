@@ -1,0 +1,18 @@
+
+/*----------------footer--------------------- */
+
+.fdiv h1
+{
+	text-align: center;
+	font-size: 23px;
+	font-family:sans-serif;
+	text-decoration: underline;
+    margin: auto;
+    padding: 0pc 10px 0px 10px;
+}
+.fdiv
+{	width: 100%;
+	background-color: grey;
+	padding : 50px 0px 50px 0px;
+}`
+

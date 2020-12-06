@@ -1,0 +1,149 @@
+.setcont{
+	width:60%;
+	margin-left:20%;
+	background-color:azure;
+	height:500px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	border-width:5px;  
+    border-style:ridge;
+	border-color:blue;
+	
+	
+}
+
+.setcont::-webkit-scrollbar {
+    display: none;
+}
+.setedit{
+	float:right;
+	margin-right:3%;
+	background-color:blue;
+	width:100px;
+	height:50px;
+	border-radius:15px;
+	text-align:center;
+	margin-top:-4%;
+	
+	
+}
+.setedit:hover{
+	cursor:hand;
+	background-color:#058fff;
+	color:blue;
+	text-decoration: underline;
+}
+.cpw{
+	background-color:blue;
+	margin-left:2%;
+	height:50px;
+	width:150px;
+	border-radius:10%;
+	margin-top:10%;
+	text-align:center;
+	
+}
+.cpw:hover{
+	cursor:hand;
+	background-color:#058fff;
+	color:blue;
+	text-decoration: underline;
+}
+.setlabel{
+
+	margin-top:5%;
+	height:20%;
+	font-size: 20px;
+	margin-left:10px;
+	
+}
+
+.l1{
+	color:blue;
+	
+
+}
+.lab{margin-top:2%;
+text-decoration:underline;
+outline:none;}
+
+.setform{
+	background-color:azure;
+	width:100%;
+	height:100%;
+	margin-top:10%;
+	padding:10px;
+	text-align:center;
+	color:blue;
+	border: 5px solid #0e91e8;
+	
+}
+
+.confirm{
+	background-color:blue;
+	margin-left:2%;
+	height:50px;
+	width:150px;
+	border-radius:10%;
+	text-align:center;
+	float:left;
+	outline:none;
+	cursor:hand;
+	
+}
+.cancel{
+	background-color:red;
+	margin-right:2%;
+	height:50px;
+	width:150px;
+	border-radius:10%;
+	text-align:center;
+	float:right;
+	outline:none;
+	cursor:hand;
+	
+}
+
+.setimp{
+	
+	margin-bottom:2%;
+	width:96%;
+	height:12%;
+	border-color:azure;
+}.setimp1{
+	
+	margin-bottom:2%;
+	width:96%;
+	height:12%;
+	border-color:azure;
+	margin-left:-1.5%;
+}
+
+.userform{
+width:60%;
+margin-left:19%;
+height:45%;
+margin-top:7%;
+position:absolute;
+display:none;
+}
+.CancelSettings{
+	background-color:red;
+	margin-right:2%;
+	height:50px;
+	width:150px;
+	border-radius:10%;
+	text-align:center;
+	float:right;
+	outline:none;
+	cursor:hand;
+	margin-top:-50px;
+		
+}
+.settingslink{
+	text-decoration:none;
+	color:black;
+}
+.cancel:hover, .CancelSettings:hover{background-color:#bf1004;}
+
+.confirm:hover{background-color:#058fff;}
