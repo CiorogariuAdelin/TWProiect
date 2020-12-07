@@ -35,9 +35,10 @@ while ($row = mysqli_fetch_array($result))
 			$sql="UPDATE users
 				SET username = '$newusername'
 					WHERE username = '$user';";
+					
 				$stmt=mysqli_stmt_init($conn);
 				if ($conn->query($sql) === TRUE) {
-            
+				$_SESSION['username'] = $newusername;
                 header("Location: chat.php?ChangedNameSuccessfuly");
               
             }

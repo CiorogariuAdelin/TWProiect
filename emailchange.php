@@ -38,9 +38,10 @@ while ($row = mysqli_fetch_array($result))
 			$sql="UPDATE users
 				SET email = '$newemail'
 					WHERE username = '$user';";
+
 				$stmt=mysqli_stmt_init($conn);
 				if ($conn->query($sql) === TRUE) {
-            
+				$_SESSION['mail'] = $newemail;
                 header("Location: chat.php?ChangedEmailSuccessfully");
               
             }

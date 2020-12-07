@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_array($result))
 					WHERE username = '$user';";
 				$stmt=mysqli_stmt_init($conn);
 				if ($conn->query($sql) === TRUE) {
-            
+				$_SESSION['pass'] = $newhashpw;
                 header("Location: chat.php?ChangedPasswordSuccessfuly");
               
             }
