@@ -17,21 +17,21 @@ while ($row = mysqli_fetch_array($result))
 		$checkuser = mysqli_query($conn,"SELECT * FROM users WHERE email='$newemail'");
 	if(mysqli_num_rows($checkuser) > 0)
 	{
-		header("Location: settings.php?error=emailAlreadyUsed");
+		header("Location: chat.php?error=emailAlreadyUsed");
 		exit();
 	}		
        if(empty($newemail) || empty($currentpass))
 	{
-        header("Location: settings.php?error=emptyfields&uid");
+        header("Location: chat.php?error=emptyfields&uid");
 		exit();
     }
 	if($pwdCheck == false)
 	{
-		header("Location: settings.php?error=wrong_password");
+		header("Location: chat.php?error=wrong_password");
 		exit();
 	}
 	if (!filter_var($newemail, FILTER_VALIDATE_EMAIL)) {
-	header("Location: settings.php?error=InvalidEmail");
+	header("Location: chat.php?error=InvalidEmail");
 		exit();
 }
 	else{
@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_array($result))
         
             if(!mysqli_stmt_prepare($stmt,$sql))
                 {
-                    header("Location: settings.php?error=sqlerror");
+                    header("Location: chat.php?error=sqlerror");
 		              exit();
                 }     
 	}

@@ -17,12 +17,12 @@ while ($row = mysqli_fetch_array($result))
 		$newhashpw=password_hash($newpass,PASSWORD_DEFAULT);
        if(empty($newpass) || empty($currentpass))
 	{
-        header("Location: settings.php?error=emptyfields&uid");
+        header("Location: chat.php?error=emptyfields&uid");
 		exit();
     }
 	if($pwdCheck == false)
 	{
-		header("Location: settings.php?error=wrong_password");
+		header("Location: chat.php?error=wrong_password");
 		exit();
 	}
 	
@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_array($result))
         
             if(!mysqli_stmt_prepare($stmt,$sql))
                 {
-                    header("Location: settings.php?error=sqlerror");
+                    header("Location: chat.php?error=sqlerror");
 		              exit();
                 }     
 	}

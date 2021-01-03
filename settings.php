@@ -70,5 +70,6 @@
 	</div>
 
      <script src="scripts/cancel.js"> </script>    
-    </body>
+    
 </html>
+

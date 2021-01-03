@@ -4,15 +4,18 @@
 .fdiv h1
 {
 	text-align: center;
-	font-size: 23px;
+	font-size: 15px	;
 	font-family:sans-serif;
 	text-decoration: underline;
     margin: auto;
     padding: 0pc 10px 0px 10px;
+
 }
 .fdiv
-{	width: 100%;
+{	width: 80%;
 	background-color: grey;
-	padding : 50px 0px 50px 0px;
+	padding : 30px 0px 30px 0px;
+	margin-left:10%;
+	height:50;
 }`
 

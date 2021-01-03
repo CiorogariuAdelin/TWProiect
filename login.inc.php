@@ -16,8 +16,10 @@ if(isset($_POST['login-submit']))
 	else
 	{
 		$sql = "select * from users where username=? or email=?;";
-		$stmt=mysqli_stmt_init($conn);
-		if(!mysqli_stmt_prepare($stmt,$sql))
+		
+        $stmt=mysqli_stmt_init($conn);
+		
+        if(!mysqli_stmt_prepare($stmt,$sql))
 		{
 			header("Location: signup.php?error=sqlError");
 		exit();

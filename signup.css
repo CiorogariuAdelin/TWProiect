@@ -4,8 +4,10 @@ body
 }
 .sign
 {   
-	background-image: url(imagini/a3.jpg);
-	background-size: cover;
+	background-image: url(imagini/home2.jfif);
+	background-repeat:no-repeat;
+	background-size:80% 80%;
+    background-position: center;
 	width: 100%;
 	height: 100%;
     margin: auto;

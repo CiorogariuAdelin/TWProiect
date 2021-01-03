@@ -14,7 +14,6 @@ session_start();
     
 
 <div class="container1">
-    
    
      
    <?php
@@ -34,7 +33,7 @@ session_start();
         
         echo
     '
-       
+        <img class="logo" src="imagini/soci1.png"></img>
         <form class="flog" action="login.inc.php" method="post">
         <label for="mail">Username: </label>
         <input class="ilog rez1" type="text" id="mail"name="mailuid" placeholder="Username">

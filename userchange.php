@@ -17,21 +17,62 @@ while ($row = mysqli_fetch_array($result))
 		$checkuser = mysqli_query($conn,"SELECT * FROM users WHERE username='$newusername'");
 	if(mysqli_num_rows($checkuser) > 0)
 	{
-		header("Location: settings.php?error=userExsists");
+		header("Location: chat.php?error=userExsists");
 		exit();
 	}		
        if(empty($newusername) || empty($currentpass))
 	{
-        header("Location: settings.php?error=emptyfields&uid");
+        header("Location: chat.php?error=emptyfields&uid");
 		exit();
     }
 	if($pwdCheck == false)
 	{
-		header("Location: settings.php?error=wrong_password");
+		header("Location: chat.php?error=wrong_password");
 		exit();
 	}
 	
 	else{
+											$read = mysqli_query($conn, "SELECT * FROM messages
+									");
+
+									while ($row3 = mysqli_fetch_array($read))
+											{	
+														$sql2="UPDATE messages
+															SET FromUser = '$newusername'
+																WHERE FromUser = '$user';";
+														$sql3="UPDATE messages
+															SET ToUser = '$newusername'
+																WHERE ToUser = '$user';";
+														$stmt2=mysqli_stmt_init($conn);
+														if ($conn->query($sql2) === TRUE) {
+														
+              
+            }
+        
+							if(!mysqli_stmt_prepare($stmt2,$sql2))
+                {
+                    echo"fail";
+
+                } 
+												$stmt3=mysqli_stmt_init($conn);
+														if ($conn->query($sql3) === TRUE) {
+														
+              
+            }
+        
+							if(!mysqli_stmt_prepare($stmt3,$sql3))
+                {
+                    echo"fail";
+
+                } 
+				
+
+											}
+											
+											
+										}
+		
+		
 			$sql="UPDATE users
 				SET username = '$newusername'
 					WHERE username = '$user';";
@@ -45,10 +86,10 @@ while ($row = mysqli_fetch_array($result))
         
             if(!mysqli_stmt_prepare($stmt,$sql))
                 {
-                    header("Location: settings.php?error=sqlerror");
+                    header("Location: chat.php?error=sqlerror");
 		              exit();
                 }     
 	}
-}
+
     mysqli_close($conn);
     ?>
