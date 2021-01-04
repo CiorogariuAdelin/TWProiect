@@ -354,13 +354,12 @@ $conn=mysqli_connect($servername,$username,$password,$name);
 	$mail= $_SESSION['mail'];
 	$username = $_SESSION['username'];
 	?>
-							<div id="usernamechange" class="userform">
+<div id="usernamechange" class="userform">
 			<form class="setform" autocomplete="off" action="userchange.php" method="post">
 				<h1>Change username </h1>
-				<h3> Enter your new username and current password </h3>
-				<label>New Username </label>
+                <label><p id ="lb2">New Username </p></label>
 				<input class="setimp" type="text" name="newusername"> <br>
-				<label>Confirm Password </label>
+                <label><p id ="lb2">Confirm Password </p></label>
 				<input id="upwlabel" class="setimp1" type="password" name="ucpass"><i id="upw" class="fa fa-eye" style="font-size:24px;margin-left:-5%"></i><br>
 				<button class="confirm" type="submit" name="userchange"> Confirm </button>
 				<button id="cancelUser" class="cancel" type="button">Cancel </button>
@@ -373,10 +372,9 @@ $conn=mysqli_connect($servername,$username,$password,$name);
 			<div id="emailchange" class="userform">
 			<form class="setform" autocomplete="off" action="emailchange.php" method="post">
 				<h1>Change Email </h1>
-				<h3> Enter your new email adress and current password </h3>
-				<label>New Email</label><br>
+                <label><p id ="lb2">New Email</p></label>
 				<input class="setimp" type="text" name="newemail"> <br>
-				<label>Confirm Password </label>
+                <label><p id ="lb2">Confirm Password </p></label>
 				<input id="epwlabel" class="setimp1" type="password" name="ecpass"><i id="epw" class="fa fa-eye" style="font-size:24px;margin-left:-5%"></i><br>
 				<button class="confirm" type="submit" name="emailchange"> Confirm </button>
 				<button id="cancelMail" class="cancel" type="button">Cancel </button>
@@ -385,14 +383,14 @@ $conn=mysqli_connect($servername,$username,$password,$name);
 	
 	</div>
 	
-		
+	
 	
 			<div id="passwordchange" class="userform">
 			<form class="setform" autocomplete="off" action="passwordchange.php" method="post">
 				<h1>Change Password </h1>
-				<label>New Password</label>
+                <label><p id ="lb2">New Password</p></label>
 				<input id="ppwlabel1" class="setimp1" type="password" name="newpass"><i id="ppw1" class="fa fa-eye" style="font-size:24px;margin-left:-5%"></i><br>
-				<label>Current Password </label>
+                <label><p id ="lb2">Current Password </p></label>
 				<input id="ppwlabel2" class="setimp1" type="password" name="pcpass"><i id="ppw2" class="fa fa-eye" style="font-size:24px;margin-left:-5%"></i><br>
 				<button class="confirm" type="submit" name="passwordchange"> Confirm </button>
 				<button id="CancelPass" class="cancel" type="button">Cancel </button>
@@ -401,10 +399,10 @@ $conn=mysqli_connect($servername,$username,$password,$name);
 	
 	</div>
 	<div class="setcont"> 
-	<div class="setlabel"> <label class="l1"> Username </label> <br> <div class="lab"> <?php echo $username ?></div> <div id="UserShow" class="setedit"><p class="text">Edit</div> </div>
-	<div class="setlabel"> <label class="l1"> Email </label> <br>  <div class="lab"> <?php echo $mail ?> </div>  <div id="MailEdit"class="setedit"><p class="text">Edit</div></div>
-	<div id="ChangePW" class="cpw"><p class="text">Change Password </div>
-	<a class="settingslink" href="chat.php"><div class="CancelSettings"><br>&nbsp; </div></a>
+        <div class="setlabel"> <label class="l1"> Username : </label> <br> <div class="lab"> <?php echo $username ?></div> <div id="UserShow" class="setedit"><p id= "ch">Change</p></div> </div>
+        <div class="setlabel"> <label class="l1"> Email : </label> <br>  <div class="lab"> <?php echo $mail ?> </div>  <div id="MailEdit"class="setedit"><p id ="ch">Change</p></div></div>
+        <div id="ChangePW" class="cpw"><p id="change"><p id="ch">Change Password </p></div>
+	<a class="settingslink" href="chat.php"><div class="CancelSettings"><br></div></a>
 	
 	</div>
 
